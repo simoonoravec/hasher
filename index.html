@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>The Hasher</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+	<link rel="stylesheet" href="https://static.0r4v3c.xyz/unicss/universal.min.css">
+    <link rel="stylesheet" href="https://static.0r4v3c.xyz/cute-alert/cute-alert.css">
+	<style> 
+    .disabled {
+        pointer-events: none;
+        cursor: wait;
+    }
+    .alert-frame {
+        max-width: 80% !important;
+    }
+    </style>
+</head>
+<body class="background background1">
+<div class="container center mg-auto">
+	<div class="panel text-black">
+		<div class="panel-body">
+			<h2 class="text-center">The Hasher</h2>
+			<noscript><div class="alert alert-red mg-auto width500 text-center">Pre používanie tejto aplikácie musíš mať povolený JavaScript</div><br></noscript>
+			<p class="text-center">Text pre hashovanie:</p>
+			<form class="text-center" id="form" method="post">
+                <textarea class="input" style="margin-bottom:10px;min-height:200px;max-height:500px;min-width:100%;max-width:100%" name="text" id="text" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a gravida nibh. Suspendisse sit amet elit pellentesque, elementum arcu eu, dapibus nunc. Suspendisse quis efficitur nisl, nec euismod leo." required disabled></textarea><br>
+                <div style="margin-bottom:10px;">
+                    <input type="checkbox" id="bcrypt_argon" name="bcrypt_argon" value="1">
+                    <label for="bcrypt_argon">Vytvor aj Bcrypt a Argon <small>(trvá dlhšie)</small></label>
+                </div>
+                <input type="submit" id="btn_hash" class="btn btn-blue btn-big mg-auto" value="Zahashuj !" disabled>
+			</form>
+		</div>
+	</div>
+	<br>
+    <div class="text-center">
+        <small style="font-size:14px;">&copy; Šimon Oravec 2022</small>
+    </div>
+</div>
+
+<script src="https://static.0r4v3c.xyz/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://static.0r4v3c.xyz/cute-alert/cute-alert.js"></script>
+<script src="https://static.0r4v3c.xyz/unicss/universal.min.js"></script>
+<script src="./hasher.js"></script>
+</body>
+</html>
